@@ -1,9 +1,9 @@
 development:
   dialect: "mysql"
   database: "doitb1g"
-  host: "localhost"
+  host: "mysql-doitb1gsts.cf3iw62vybyo.us-east-2.rds.amazonaws.com"
   port: "3306"
-  user: "root"
+  user: "mysqladmin"
   password: "asdfghjkl;'"
   encoding: "utf8mb4_general_ci"
 
