@@ -1,0 +1,20 @@
+before_script:
+  # - ln -s /builds /go/src/$(echo "gitlab.com/alexcarol/test" | cut -d "/" -f1)
+  # - cd /go/src/gitlab.com/doitbig-ms/test
+  # - mkdir -p public/assets
+  - go get -u github.com/gobuffalo/buffalo/buffalo
+  - go get -t -v ./...
+  - export PATH="$PATH:$GOPATH/bin"
+
+image: golang:latest
+
+stages:
+  - test
+
+test:
+  stage: test
+  services:
+    - mysql:latest
+  script:
+    - buffalo test
+
