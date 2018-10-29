@@ -2,7 +2,7 @@ package grifts
 
 import (
 	"github.com/gobuffalo/buffalo"
-	"github.com/jucjeff/doitb1g_backend/actions"
+	"gitlab.com/doitbig-ms/actions"
 )
 
 func init() {

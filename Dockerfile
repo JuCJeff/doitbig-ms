@@ -2,13 +2,9 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:v0.13.1 as builder
 
-RUN mkdir -p $GOPATH/src/github.com/jucjeff/doitb1g_backend
-WORKDIR $GOPATH/src/github.com/jucjeff/doitb1g_backend
+RUN mkdir -p $GOPATH/src/gitlab.com/doitbig-ms
+WORKDIR $GOPATH/src/gitlab.com/doitbig-ms
 
-# this will cache the npm install step, unless package.json changes
-ADD package.json .
-ADD yarn.lock .
-RUN yarn install --no-progress
 ADD . .
 RUN go get $(go list ./... | grep -v /vendor/)
 RUN buffalo build --static -o /bin/app
