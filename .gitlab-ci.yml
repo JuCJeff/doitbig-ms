@@ -1,6 +1,6 @@
 before_script:
   - apt-get update && apt-get install -y mysql-client
-  - ln -s /builds /go/src/$(echo "gitlab.com/doitbig-ms" | cut -d "/" -f1)
+  - ln -s /builds/cs506-doit-sts /go/src/$(echo "gitlab.com/doitbig-ms" | cut -d "/" -f1)
   - cd /go/src/gitlab.com/doitbig-ms
   - mkdir -p public/assets
   - go get -u github.com/gobuffalo/buffalo/buffalo
