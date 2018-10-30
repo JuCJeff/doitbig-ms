@@ -61,6 +61,7 @@ func App() *buffalo.App {
 		app.GET("/signup", SignupHandler)
 		app.GET("/profile", ProfileHandler)
 		app.GET("/signout", SignoutHandler)
+		app.GET("/login", LoginHandler)
 	}
 
 	return app
