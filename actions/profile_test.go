@@ -5,3 +5,9 @@ func (as *ActionSuite) Test_ProfileHandler() {
 	as.Equal(200, res.Code)
 	as.Contains(res.Body.String(), "This is the profile page!")
 }
+
+func (as *ActionSuite) Test_ProfileGetter() {
+	res := as.JSON("/profile?uid=12345").Get()
+	as.Equal(200, res.Code)
+	as.Contains(res.Body.String(), "uid = 12345")
+}
