@@ -2,16 +2,16 @@ package actions
 
 import (
 	"github.com/gobuffalo/buffalo"
+	"github.com/gobuffalo/buffalo-pop/pop/popmw"
 	"github.com/gobuffalo/envy"
 	forcessl "github.com/gobuffalo/mw-forcessl"
 	paramlogger "github.com/gobuffalo/mw-paramlogger"
 	"github.com/unrolled/secure"
+	"gitlab.com/doitbig-ms/models"
 
-	"github.com/gobuffalo/buffalo-pop/pop/popmw"
 	contenttype "github.com/gobuffalo/mw-contenttype"
 	"github.com/gobuffalo/x/sessions"
 	"github.com/rs/cors"
-	"gitlab.com/doitbig-ms/models"
 )
 
 // ENV is used to help switch settings based on where the
@@ -53,7 +53,7 @@ func App() *buffalo.App {
 		app.Use(contenttype.Set("application/json"))
 
 		// Wraps each request in a transaction.
-		//  c.Value("tx").(*pop.Connection)
+		// c.Value("tx").(*pop.Connection)
 		// Remove to disable this.
 		app.Use(popmw.Transaction(models.DB))
 
