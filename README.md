@@ -1,35 +1,36 @@
-# Welcome to Buffalo!
+# Welcome to doitb1g-ms!
 
-Thank you for choosing Buffalo for your web development needs.
+This comprises the backend of the DoITB1G STS Project. The backend is responsible for making queries to the database and interfacing this data with the sister project doitb1g-ui. 
 
-## Database Setup
+## Requirements
 
-It looks like you chose to set up your application using a mysql database! Fantastic!
-
-The first thing you need to do is open up the "database.yml" file and edit it to use the correct usernames, passwords, hosts, etc... that are appropriate for your environment.
-
-You will also need to make sure that **you** start/install the database of your choice. Buffalo **won't** install and start mysql for you.
-
-### Create Your Databases
-
-Ok, so you've edited the "database.yml" file and started mysql, now Buffalo can create the databases in that file for you:
-
-	$ buffalo db create -a
+- Golang (v1.11+)
+- SQLite 3
+- Buffalo: https://gobuffalo.io/en/docs/installation
 
 ## Starting the Application
 
-Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
+Our project is based on an underlying Go Web boilerplate that facilitates speed of development called Buffalo. Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
 
 	$ buffalo dev
 
-If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
+If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" message.
 
-**Congratulations!** You now have your Buffalo application up and running.
+**Congratulations!** You now have our application up and running.
 
-## What Next?
+## Supported Routes
 
-We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
+Your can post GET requests to the following routes with the following syntax:
 
-Good luck!
+- http://localhost:3000/login
+- http://localhost:3000/signup
+- http://localhost:3000/signout
+- http://localhost:3000/
+- http://localhost:3000/profile?uid=xxxxx with `xxxxx` being a valid User ID. Omitting the query string will return blank data.
 
-[Powered by Buffalo](http://gobuffalo.io)
+## Testing
+
+To run tests, Buffalo features a test runner that runs the underlying Go tests of the project. 
+
+	$ buffalo test
+
