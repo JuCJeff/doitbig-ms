@@ -1,0 +1,16 @@
+{
+    "identityPoolName": "doitbigms_identitypool_dcbbeaf3",
+    "allowUnauthenticatedIdentities": true,
+    "thirdPartyAuth": false,
+    "lambdaLogPolicy": "doitbigms_lambda_log_policy",
+    "openIdLambdaRoleName": "doitbigms_openid_lambda_role",
+    "openIdRolePolicy": "doitbigms_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "doitbigms_openid_lambda_iam_policy",
+    "openIdLogPolicy": "doitbigms_openid_lambda_log_policy",
+    "authSelections": "identityPoolOnly",
+    "resourceName": "cognitofef14427",
+    "unAuthRoleName": "doitbigms-20181110105030-unauthRole",
+    "authRoleName": "doitbigms-20181110105030-authRole",
+    "unAuthRoleArn": "arn:aws:iam::423182620536:role/doitbigms-20181110105030-unauthRole",
+    "authRoleArn": "arn:aws:iam::423182620536:role/doitbigms-20181110105030-authRole"
+}

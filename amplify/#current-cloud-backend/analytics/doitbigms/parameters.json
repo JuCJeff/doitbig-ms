@@ -1,0 +1,11 @@
+{
+    "appName": "doitbigms",
+    "roleName": "pinpointLambdaRoleb3237a85",
+    "cloudWatchPolicyName": "cloudWatchPolicyb3237a85",
+    "pinpointPolicyName": "pinpointPolicyb3237a85",
+    "authPolicyName": "pinpoint_amplify_b3237a85",
+    "unauthPolicyName": "pinpoint_amplify_b3237a85",
+    "authRoleName": "doitbigms-20181110105030-authRole",
+    "unauthRoleName": "doitbigms-20181110105030-unauthRole",
+    "IAMPrefix": "423182620536"
+}

@@ -1,0 +1,20 @@
+{
+    "projectName": "doitbigms",
+    "projectPath": "/Users/jucjeff/Desktop/CS 506/doitb1g-project/doitbig-ms",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/jucjeff/.nvm/versions/node/v8.11.2/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "react",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "build",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/jucjeff/.nvm/versions/node/v8.11.2/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+    }
+}

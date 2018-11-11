@@ -1,0 +1,3 @@
+create_table("usergoes") {
+	t.Column("id", "uuid", {"primary": true})
+}
