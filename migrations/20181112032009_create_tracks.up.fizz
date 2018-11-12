@@ -1,0 +1,3 @@
+create_table("tracks") {
+	t.Column("id", "uuid", {"primary": true})
+}

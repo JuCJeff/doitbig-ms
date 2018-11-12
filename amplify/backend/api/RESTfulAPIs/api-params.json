@@ -1,0 +1,27 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaArn": "arn:aws:lambda:us-east-1:423182620536:function:doitbigms-20181110105030-analytic-PinpointFunction-HUTYEO4UVGRI",
+            "lambdaFunction": "doitbigms-20181110105030-analytic-PinpointFunction-HUTYEO4UVGRI",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "RESTfulAPIs",
+    "apiName": "doitbigms4da1a134",
+    "functionArns": [
+        {
+            "lambdaFunction": "doitbigms-20181110105030-analytic-PinpointFunction-HUTYEO4UVGRI",
+            "lambdaArn": "arn:aws:lambda:us-east-1:423182620536:function:doitbigms-20181110105030-analytic-PinpointFunction-HUTYEO4UVGRI"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "doitbigms-20181111203301-authRole",
+        "unAuthRoleName": "doitbigms-20181111203301-unauthRole"
+    },
+    "dependsOn": []
+}
