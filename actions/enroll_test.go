@@ -6,6 +6,6 @@ func (as *ActionSuite) Test_EnrollGetHandler() {
 }
 
 func (as *ActionSuite) Test_EnrollPostHandler() {
-	res := as.HTML("/enroll").Post()
+	res := as.HTML("/enroll").Post("?uid=12345&cid=12345")
 	as.Equal(200, res.Code)
 }
