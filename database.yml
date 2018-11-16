@@ -1,20 +1,21 @@
 development:
   dialect: "mysql"
   database: "doitb1g"
-  host: "mysql-doitb1gsts.cf3iw62vybyo.us-east-2.rds.amazonaws.com"
+  host: "doitb1g-db.mysql.database.azure.com"
   port: "3306"
-  user: "mysqladmin"
-  password: "asdfghjkl;'"
+  user: "mysqladmin@doitb1g-db"
+  password: "doitb1gasdfghjkl;'"
   encoding: "utf8mb4_general_ci"
 
 test:
   dialect: "mysql"
   database: "doitb1g"
-  host: "mysql-doitb1gsts.cf3iw62vybyo.us-east-2.rds.amazonaws.com"
+  host: "doitb1g-db.mysql.database.azure.com"
   port: "3306"
-  user: "mysqladmin"
-  password: "asdfghjkl;'"
+  user: "mysqladmin@doitb1g-db"
+  password: "doitb1gasdfghjkl;'"
   encoding: "utf8mb4_general_ci"
 
 # production:
 #   url: {{envOr "DATABASE_URL" "mysql://root:root@(localhost:3306)/doitbig-ms_production?parseTime=true&multiStatements=true&readTimeout=1s"}}
+
