@@ -25,5 +25,4 @@ func LoginHandler(c buffalo.Context) error {
 	c.Cookies().SetWithExpirationTime("user_id", userID, exp)
 	//successfully set cookies, now redirect to homepage
 	return c.Redirect(307, "rootPath()")
-	//return c.Render(200, r.JSON(map[string]string{"message": "This is the Login page!"}))
 }
