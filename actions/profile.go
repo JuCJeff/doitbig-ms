@@ -9,8 +9,8 @@ import (
 // ProfileHandler is a handler to serve up
 // a signup page.
 func ProfileHandler(c buffalo.Context) error {
-	student := models.Student{}
+	user := models.User{}
 	db, _ := pop.Connect("development")
-	db.Find(&student, c.Param("uid"))
-	return c.Render(200, r.JSON(student))
+	db.Find(&user, c.Param("uid"))
+	return c.Render(200, r.JSON(user))
 }
