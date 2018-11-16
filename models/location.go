@@ -1,7 +1,7 @@
 package models
 
-// Course model is a struct that contains the name, time_ID, Location_ID.
-type Course struct {
+// Location model is a struct that contains the ID, roomNumber, buildingName, street city, postalCode, state.
+type Location struct {
 	ID        		int    `db:"id"`
 	roomNumber 	  	string `db:"roomNumber"`
 	buildingName   	string `db:"buildingName"`
