@@ -13,10 +13,7 @@ stages:
 .test-vars: &test-vars
   variables:
     GO_ENV: "test"
-    MYSQL_DATABASE: "doitbig-ms_test"
-    MYSQL_ROOT_PASSWORD: "root"
-    TEST_DATABASE_URL: "mysql://root:root@(mysql:3306)/doitbig-ms_test?parseTime=true&multiStatements=true&readTimeout=1s"
-
+  
 # Golang version choice helper
 .use-golang-image: &use-golang-latest
   image: golang:latest
