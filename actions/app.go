@@ -64,6 +64,8 @@ func App() *buffalo.App {
 		app.GET("/login", LoginHandler)
 		app.GET("/enroll", EnrollGetHandler)
 		app.POST("/enroll", EnrollPostHandler)
+		app.GET("/track", TrackHandler)
+		app.GET("/course", CourseHandler)
 	}
 
 	return app
