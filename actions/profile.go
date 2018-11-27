@@ -10,7 +10,7 @@ import (
 // a signup page.
 func ProfileHandler(c buffalo.Context) error {
 	user := models.User{}
-	db, _ := pop.Connect("development")
+	db := c.Value("tx").(*pop.Connection)
 	db.Find(&user, c.Param("uid"))
 	return c.Render(200, r.JSON(user))
 }
