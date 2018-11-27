@@ -10,7 +10,7 @@ import (
 // a course page.
 func CourseHandler(c buffalo.Context) error {
 	course := models.Course{}
-	db, _ := pop.Connect("development")
+	db := c.Value("tx").(*pop.Connection)
 	db.Find(&course, c.Param("cid"))
-	return c.Render(200, r.JSON(map[string]string{"message": "This is the course page!"}))
+	return c.Render(200, r.JSON(course))
 }
