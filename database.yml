@@ -10,7 +10,7 @@ development:
 test:
   dialect: "mysql"
   database: "doitb1gdb"
-  host: "doitbig.c3lglnwntifb.us-east-1.rds.amazonaws.com"
+  host: "doitb1gdb-test.c3lglnwntifb.us-east-1.rds.amazonaws.com"
   port: "3306"
   user: "sqladmin"
   password: "asdfghjkl;'"
