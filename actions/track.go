@@ -10,7 +10,7 @@ import (
 // a tracks page.
 func TrackHandler(c buffalo.Context) error {
 	track := models.Track{}
-	db, _ := pop.Connect("development")
+	db := c.Value("tx").(*pop.Connection)
 	db.Find(&track, c.Param("tid"))
-	return c.Render(200, r.JSON(map[string]string{"message": "This is the track page!"}))
+	return c.Render(200, r.JSON(track))
 }
