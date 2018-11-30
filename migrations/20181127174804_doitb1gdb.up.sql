@@ -6,3 +6,4 @@ CREATE TABLE `doitb1gdb`.`users` (
   `password` VARCHAR(45) NULL,
   `image` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
+  insert into users (id, firstname, lastname, email, password, image) values (12345, "John", "Appleseed"," japple@wisc.edu", "password", "asdf");

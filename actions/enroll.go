@@ -1,11 +1,12 @@
 package actions
 
 import (
-	"github.com/gobuffalo/buffalo"
+	"database/sql"
 	"fmt"
 	"time"
-    "database/sql"
-    _ "github.com/go-sql-driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/gobuffalo/buffalo"
 )
 
 // EnrollGetHandler is a handler to manage course enrollment
@@ -23,27 +24,21 @@ func EnrollPostHandler(c buffalo.Context) error {
 	var cid = c.Param("cid")
 	var nowTime = time.Now().Format("2006-01-02 15:04:05")
 
-	db, err := sql.Open("mysql", "sqladmin:asdfghjkl;'@tcp(doitbig.c3lglnwntifb.us-east-1.rds.amazonaws.com:3306)/doitb1gdb")
-	//db.Ping()
-    
-    // if there is an error opening the connection, handle it
-    if err != nil {
-        panic(err.Error())
-	}
-	
-	insert, err := db.Query("INSERT INTO courseEnroll VALUES ('" + uid + "', '" + cid + 
-		"', '" + nowTime + "')")
-    if err != nil {
-        panic(err.Error())
-	}
-	
-	// be careful deferring Queries if you are using transactions
-    defer insert.Close()
-    
-    // defer the close till after the main function has finished
-    // executing 
-    defer db.Close()
+	db, _ := sql.Open("mysql", "sqladmin:asdfghjkl;'@tcp(doitbig.c3lglnwntifb.us-east-1.rds.amazonaws.com:3306)/doitb1gdb")
 
-	return c.Render(200, r.JSON(map[string]string{"message": "UserID " + uid + 
+	insert, err := db.Query("INSERT INTO courseEnroll VALUES ('" + uid + "', '" + cid +
+		"', '" + nowTime + "')")
+	if err != nil {
+		panic(err.Error())
+	}
+
+	// be careful deferring Queries if you are using transactions
+	defer insert.Close()
+
+	// defer the close till after the main function has finished
+	// executing
+	defer db.Close()
+
+	return c.Render(200, r.JSON(map[string]string{"message": "UserID " + uid +
 		" has successfully enrolled into classID " + cid + " at time " + nowTime}))
 }
