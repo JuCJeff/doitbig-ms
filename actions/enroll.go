@@ -24,13 +24,7 @@ func EnrollPostHandler(c buffalo.Context) error {
 	var cid = c.Param("cid")
 	var nowTime = time.Now().Format("2006-01-02 15:04:05")
 
-	db, err := sql.Open("mysql", "sqladmin:asdfghjkl;'@tcp(doitbig.c3lglnwntifb.us-east-1.rds.amazonaws.com:3306)/doitb1gdb")
-	//db.Ping()
-
-	// if there is an error opening the connection, handle it
-	if err != nil {
-		panic(err.Error())
-	}
+	db, _ := sql.Open("mysql", "sqladmin:asdfghjkl;'@tcp(doitbig.c3lglnwntifb.us-east-1.rds.amazonaws.com:3306)/doitb1gdb")
 
 	insert, err := db.Query("INSERT INTO courseEnroll VALUES ('" + uid + "', '" + cid +
 		"', '" + nowTime + "')")
