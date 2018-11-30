@@ -12,3 +12,4 @@ doitbig-ms
 .vscode/
 .grifter/
 .env
+coverage.out

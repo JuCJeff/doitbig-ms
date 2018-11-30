@@ -7,10 +7,10 @@ import (
 )
 
 // ProfileHandler is a handler to serve up
-// a signup page.
+// user profile data from the database
 func ProfileHandler(c buffalo.Context) error {
 	user := models.User{}
-	db, _ := pop.Connect("development")
+	db := c.Value("tx").(*pop.Connection)
 	db.Find(&user, c.Param("uid"))
 	return c.Render(200, r.JSON(user))
 }
