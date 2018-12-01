@@ -6,4 +6,5 @@ type Course struct {
 	Name     string `db:"name"`
 	Location string `db:"location"`
 	Time     string `db:"time"`
+	Image    string `db:"image"`
 }

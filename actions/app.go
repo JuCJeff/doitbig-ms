@@ -4,14 +4,13 @@ import (
 	"github.com/gobuffalo/buffalo"
 	"github.com/gobuffalo/buffalo-pop/pop/popmw"
 	"github.com/gobuffalo/envy"
+	contenttype "github.com/gobuffalo/mw-contenttype"
 	forcessl "github.com/gobuffalo/mw-forcessl"
 	paramlogger "github.com/gobuffalo/mw-paramlogger"
-	"github.com/unrolled/secure"
-	"gitlab.com/doitbig-ms/models"
-
-	contenttype "github.com/gobuffalo/mw-contenttype"
 	"github.com/gobuffalo/x/sessions"
 	"github.com/rs/cors"
+	"github.com/unrolled/secure"
+	"gitlab.com/doitbig-ms/models"
 )
 
 // ENV is used to help switch settings based on where the
@@ -63,7 +62,7 @@ func App() *buffalo.App {
 		app.GET("/signout", SignoutHandler)
 		app.GET("/login", LoginHandler)
 		app.GET("/track", TrackHandler)
-		app.GET("/course", CourseHandler)
+		app.GET("/courses", CourseHandler)
 		app.GET("/enroll", EnrollGetHandler)
 		app.POST("/enroll", EnrollPostHandler)
 	}
