@@ -14,9 +14,9 @@ func HomeHandler(c buffalo.Context) error {
 	courseOne := "Excel 1"
 	courseTwo := "Adobe Illustrator 1"
 	courseThree := "JavaScript"
-	courseOneDes := "STS Course One Description goes here."
-	courseTwoDes := "STS Course Two Description goes here."
-	courseThreeDes := "STS Course Three Description goes here."
+	courseOneDes := "An introduction to Excel."
+	courseTwoDes := "A first look at Adobe Illustrator."
+	courseThreeDes := "A beginner's guide to Javascript."
 	return c.Render(200, r.JSON(map[string]string{
 		"track_1":      trackOne,
 		"track_1_des":  trackOneDes,
