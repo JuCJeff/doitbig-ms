@@ -7,5 +7,5 @@ type User struct {
 	LastName  string `db:"lastname"`
 	Email     string `db:"email"`
 	Password  string `db:"password"`
-	Image     []byte `db:"image"`
+	Image     string `db:"image"`
 }
